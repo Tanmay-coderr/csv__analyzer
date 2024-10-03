@@ -1,4 +1,4 @@
-# Generalized CSV Analyzer
+# CSV Analyzer
 
 This Python script analyzes and cleans any CSV file. It performs basic data analysis, handles missing values, and saves the cleaned data.
 
