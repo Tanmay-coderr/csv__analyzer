@@ -22,4 +22,4 @@ This Python script analyzes and cleans any CSV file. It performs basic data anal
 2.Change the file directory using the following command:<br>
 `cd C:\Users\USER NAME\Desktop\DIRECTORY`<br>
 3.Enter the following command:
-`python test_csv_2.py your_csv_file_name.csv`
+`python test_csv_2.py demo.csv`
