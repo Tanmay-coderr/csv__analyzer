@@ -18,8 +18,7 @@ This Python script analyzes and cleans any CSV file. It performs basic data anal
    pip install pandas
 ## Running the script
 
-1.Open the command prompt.<br>
-2.Change the file directory using the following command:<br>
-`cd C:\Users\USER NAME\Desktop\DIRECTORY`<br>
-3.Enter the following command:
-`python test_csv_2.py demo.csv`
+1.Open the `test_csv_2.py` file using vscode.<br>
+2.Run the script.<br>
+3.Enter the path of the csv file.<br>
+4.You will get the analyzed data.
