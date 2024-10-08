@@ -1,5 +1,5 @@
 import pandas as pd
-import sys
+import os
 
 def analyze_csv(input_file, output_file=None):
     # Load CSV file
@@ -11,8 +11,8 @@ def analyze_csv(input_file, output_file=None):
         return
 
     # Show the first few rows of the DataFrame
-    print("\n--- Preview of the data ---\n")
-    print(df, "\n")
+    print("\n--- Preview of the data (first 5 rows) ---\n")
+    print(df.head(), "\n")  # Show only the first 5 rows
 
     # Show basic information
     print("\n--- Basic Information ---\n")
@@ -51,10 +51,16 @@ def analyze_csv(input_file, output_file=None):
             print(f"Error saving file: {e}")
 
 if __name__ == "__main__":
-    # Check for command-line arguments
-    if len(sys.argv) < 2:
-        print("Usage: python analyze_csv.py <input_file.csv> [output_file.csv]")
+    # Get input file path from the user
+    input_file = input("Enter the path of the CSV file you want to analyze: ")
+
+    # Check if the file exists
+    if not os.path.exists(input_file):
+        print(f"Error: The file '{input_file}' does not exist.")
     else:
-        input_file = sys.argv[1]
-        output_file = sys.argv[2] if len(sys.argv) > 2 else None
+        # Optionally, ask for an output file path
+        output_file = input("Enter the path to save the cleaned CSV file (or press Enter to skip saving): ")
+        output_file = output_file if output_file.strip() != '' else None
+
+        # Call the function to analyze the CSV
         analyze_csv(input_file, output_file)
